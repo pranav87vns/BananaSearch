@@ -29,7 +29,8 @@ const Home = () => {
       const searchResult = leaderboard.filter(
         a =>
           a.name?.split(' ')[0]?.toLowerCase() === search ||
-          a.name?.split(' ')[1]?.toLowerCase() === search,
+          a.name?.split(' ')[1]?.toLowerCase() === search ||
+          a.name?.toLowerCase() === search.toLowerCase(),
       );
       if (searchResult.length > 0) {
         setSearchResult(searchResult);
