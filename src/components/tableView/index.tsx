@@ -42,7 +42,8 @@ export const TableView = ({
   let searchIndex = finalArray.findIndex(
     a =>
       a.name?.split(' ')[0]?.toLowerCase() === search ||
-      a.name?.split(' ')[1]?.toLowerCase() === search,
+      a.name?.split(' ')[1]?.toLowerCase() === search ||
+      a.name?.toLowerCase() === search.toLowerCase(),
   );
   if (searchIndex > 9) {
     finalArray[9] = finalArray[10];
